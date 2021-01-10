@@ -3,92 +3,100 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: white;
-    color: black;
-}
-main{
-    margin-top: 25px;
-    margin-left: 50px;
-}
 .container{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    height: 70vh;  
+    margin-left: 10vh;
+    margin-top: 5vh;
+    margin-right: 10vh;
+    height: 90vh;
 }
-.container h4{
+.container .titulo h4{
+    font-size: 22px;
     font-family: "Inconsolata", monospace;
 }
-img.scarecrow{
-    width: 450px;
-    height:400px;
+.container .imagem img{
+    width: 530px;
+    height: 440px;
 }
-.container .linha{
+.container .principal{
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
     flex-direction: row;
 }
-.container .coluna{
-    display:flex;
-    justify-content: space-between;
+.container .textos{
+    height: 440px;
+    display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     text-align: left;
-    height:100%;
 }
-.container .coluna h1{
+.container .textos h2{
+    font-size: 62px;
     font-family: "Space Mono", monospace;
-    font-size: 54px;
-    color:  rgba(51, 51, 51, 1);
-    width: 60%;
+    color: rgba(51, 51, 51, 1);
 }
-.container .coluna p{
-    font-family:  "Space Mono", monospace;
-    font-size: 20px;
+.container .textos p{
+    font-size: 22px;
+    font-family: "Space Mono",monospace;
     color: rgba(79, 79, 79, 1);
-    width: 50%;
+    margin-right: 30%;
 }
-.container .linha .coluna button{
+.container .textos button{
     background-color: rgba(51, 51, 51, 1);
     color: white;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
     padding: 15px;
     border: none;
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
+    width: 216px;
 }
-.container .linha .coluna button:hover{
+.container .textos button:hover{
     cursor: pointer;
-    transition: 1s;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)100%);
+    background-color: rgba(79, 79, 79, 1);
+    transition: 2s;
 }
-@media screen and (max-width:600px){
-    body{
-        height: 100vh;
-    }
-    main{
-        height: 80%;
-    }
-
-    .container{
+.container .autor{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100vh;
+}
+.container .autor h5{
+    font-size: 14px;
+    color: rgba(51, 51, 51, 1);
+    font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 650px){
+    .container .principal{
         display: flex;
-        justify-content: space-evenly;
         align-items: flex-start;
-        flex-direction: column;
-        height: 100%;
-    }
-    .container .linha{
-        display: flex;
         justify-content: space-between;
-        align-items: center;
         flex-direction: column;
     }
-    .container .coluna h1{
-        width: 100%;
+    .container .autor{
+        display: flex;
+        justify-content: unset;
+        align-items: flex-start;
+        flex: row;
+        margin-top: 40px;
     }
-    .container .coluna p{
-        width: 70%;
+}
+@media screen and (max-width:1024px){
+    .container .textos h2{
+        font-size: 42px;
+        font-family: "Space Mono", monospace;
+        color: rgba(51, 51, 51, 1);        
+    }
+    .container .textos p{
+        font-size: 18px;
+        font-family: "Space Mono",monospace;
+        color: rgba(79, 79, 79, 1);
+        margin-right: 30%;       
     }
 }
